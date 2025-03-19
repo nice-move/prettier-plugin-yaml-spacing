@@ -4,6 +4,8 @@ A [prettier] plugin that adds padding between array and object items in YAML fil
 
 [prettier]: https://prettier.io/
 
+<img src="https://cdn.worldvectorlogo.com/logos/prettier-2.svg" alt="logo" height="80" align="right">
+
 [![npm][npm-badge]][npm-url]
 [![github][github-badge]][github-url]
 ![node][node-badge]

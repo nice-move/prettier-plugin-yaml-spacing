@@ -12,8 +12,6 @@ type Obj = {
 };
 
 function addPadding(node: Node, haveParent = false) {
-  console.log(node);
-
   if (isMap(node)) {
     node.flow = false;
     addPaddingToMap(node, haveParent);

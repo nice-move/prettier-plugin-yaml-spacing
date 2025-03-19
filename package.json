@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-yaml-spacing",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A `prettier` plugin that adds padding between array and object items in YAML files",
   "license": "MIT",
   "author": {
@@ -36,7 +36,7 @@
     "lint:staged": "nice-move lint staged",
     "lint:type": "tsc --noEmit",
     "prepare": "nice-move git hooks",
-    "prepublishOnly": "pnpm run lint:staged && pnpm test",
+    "prepublishOnly": "pnpm test && pnpm run build",
     "snapshot": "na run tester --watch --test-update-snapshots test/test.mts",
     "test": "na run tester --test test/test.mts",
     "tester": "node --experimental-strip-types --import ./test/preload.mjs"
@@ -64,5 +64,8 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "prettier": "@nice-move/prettier-config"
+  "prettier": "@nice-move/prettier-config",
+  "x-readme": {
+    "logo": "https://worldvectorlogo.com/zh/download/prettier-2.svg"
+  }
 }
