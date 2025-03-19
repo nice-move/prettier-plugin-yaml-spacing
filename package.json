@@ -1,0 +1,68 @@
+{
+  "name": "prettier-plugin-yaml-spacing",
+  "version": "0.0.0",
+  "description": "A `prettier` plugin that adds padding between array and object items in YAML files",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "keywords": [
+    "formatting",
+    "prettier",
+    "prettier-plugin",
+    "yaml"
+  ],
+  "homepage": "https://www.npmjs.com/package/prettier-plugin-yaml-spacing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nice-move/prettier-plugin-yaml-spacing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nice-move/prettier-plugin-yaml-spacing/issues"
+  },
+  "main": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "lint:staged": "nice-move lint staged",
+    "lint:type": "tsc --noEmit",
+    "prepare": "nice-move git hooks",
+    "prepublishOnly": "pnpm run lint:staged && pnpm test",
+    "snapshot": "na run tester --watch --test-update-snapshots test/test.mts",
+    "test": "na run tester --test test/test.mts",
+    "tester": "node --experimental-strip-types --import ./test/preload.mjs"
+  },
+  "dependencies": {
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@bring-it/npm": "^0.6.0",
+    "@nice-move/all-in-base": "^0.4.15",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
+    "garou": "^0.9.5",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "prettier": "^3.5.3"
+  },
+  "packageManager": "pnpm@10.6.4",
+  "engines": {
+    "node": "^22.11.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "prettier": "@nice-move/prettier-config"
+}

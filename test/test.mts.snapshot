@@ -1,0 +1,99 @@
+exports[`between array items 1`] = `
+"""yaml
+- item1 # 6
+
+- item2 # 5
+
+- item3
+"""
+`;
+
+exports[`between object items 1`] = `
+"""yaml
+foo: bar
+
+bar: baz
+
+abc: 456
+"""
+`;
+
+exports[`between object nested 1`] = `
+"""yaml
+foo: bar
+
+bar: baz
+
+abc:
+  
+  foo: bar
+
+  bar: baz
+
+efg:
+  
+  - item1
+
+  - item2
+
+  - foo: bar
+
+    bar: baz
+"""
+`;
+
+exports[`between object nested 2`] = `
+"""yaml
+- item1
+
+- item2
+
+- - item1
+
+  - item2
+
+- foo: bar
+
+  bar: baz
+
+  abc:
+    
+    - item1
+
+    - item2
+"""
+`;
+
+exports[`empty 1`] = `
+"""yaml
+
+"""
+`;
+
+exports[`empty 2`] = `
+"""yaml
+"456464646"
+"""
+`;
+
+exports[`like json 1`] = `
+"""yaml
+- item1
+
+- item2
+
+- - item1
+
+  - "2"
+
+- foo: bar
+
+  bar: baz
+
+  abc:
+    
+    - item-1
+
+    - item-2
+"""
+`;

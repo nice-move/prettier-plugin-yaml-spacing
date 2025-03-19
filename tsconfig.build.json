@@ -1,0 +1,15 @@
+{
+  "extends": "@nice-move/tsconfig/base.json",
+  "include": [
+    "src"
+  ],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "types": [
+      "node"
+    ],
+    "skipLibCheck": true,
+    "noEmit": false,
+    "rewriteRelativeImportExtensions": true
+  }
+}
